@@ -972,6 +972,9 @@ hi! link cssGeneratedContentProp GruvboxAqua
 
 hi! link javaScriptBraces GruvboxFg1
 hi! link javaScriptFunction GruvboxAqua
+hi! link javascriptFuncName GruvboxAqua
+hi! link javascriptFuncArg GruvboxAqua
+hi! link javascriptLabel GruvboxAqua
 hi! link javaScriptIdentifier GruvboxRed
 hi! link javaScriptMember GruvboxBlue
 hi! link javaScriptNumber GruvboxPurple
@@ -992,9 +995,9 @@ hi! link javascriptClassSuperName GruvboxYellow
 hi! link javascriptGlobal GruvboxYellow
 
 hi! link javascriptEndColons GruvboxFg1
-hi! link javascriptFuncArg GruvboxFg1
-hi! link javascriptGlobalMethod GruvboxFg1
-hi! link javascriptNodeGlobal GruvboxFg1
+hi! link javascriptFuncArg GruvboxOrange
+hi! link javascriptGlobalMethod GruvboxOrange
+hi! link javascriptNodeGlobal GruvboxOrange
 
 " hi! link javascriptVariable GruvboxOrange
 hi! link javascriptVariable GruvboxRed
@@ -1018,12 +1021,14 @@ hi! link javascriptMessage GruvboxRed
 hi! link javascriptTemplateSB GruvboxAqua
 hi! link javascriptTemplateSubstitution GruvboxFg1
 
-" hi! link javascriptLabel GruvboxBlue
-" hi! link javascriptObjectLabel GruvboxBlue
-" hi! link javascriptPropertyName GruvboxBlue
-hi! link javascriptLabel GruvboxFg1
-hi! link javascriptObjectLabel GruvboxFg1
-hi! link javascriptPropertyName GruvboxFg1
+hi! link javascriptLabel GruvboxAqua
+hi! link javascriptObjectLabel GruvboxPurple
+hi! link javascriptObject GruvboxAqua
+
+hi! link javascriptPropertyName GruvboxAqua
+" hi! link javascriptLabel GruvboxFg1
+" hi! link javascriptObjectLabel GruvboxFg1
+" hi! link javascriptPropertyName GruvboxFg1
 
 hi! link javascriptLogicSymbols GruvboxFg1
 hi! link javascriptArrowFunc GruvboxFg1
