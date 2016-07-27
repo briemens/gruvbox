@@ -93,10 +93,12 @@ let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
 let s:gb.dark2       = ['#504945', 239]     " 80-73-69
 let s:gb.dark3       = ['#665c54', 241]     " 102-92-84
 let s:gb.dark4       = ['#7c6f64', 243]     " 124-111-100
+let s:gb.dark99      = ['#303030', 238]     " 60-56-54
 let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100
 
 let s:gb.gray_245    = ['#928374', 245]     " 146-131-116
 let s:gb.gray_244    = ['#928374', 244]     " 146-131-116
+let s:gb.gray_251    = ['#c7c4bd', 251]     " 146-131-116
 
 let s:gb.light0_hard = ['#f9f5d7', 230]     " 249-245-215
 let s:gb.light0      = ['#fdf4c1', 229]     " 253-244-193
@@ -179,8 +181,10 @@ if s:is_dark
   let s:bg2  = s:gb.dark2
   let s:bg3  = s:gb.dark3
   let s:bg4  = s:gb.dark4
+  let s:bg99  = s:gb.dark99
 
   let s:gray = s:gb.gray_245
+  let s:gray1 = s:gb.gray_251
 
   let s:fg0 = s:gb.light0
   let s:fg1 = s:gb.light1
@@ -211,6 +215,7 @@ else
   let s:bg4  = s:gb.light4
 
   let s:gray = s:gb.gray_244
+  let s:gray1 = s:gb.gray_251
 
   let s:fg0 = s:gb.dark0
   let s:fg1 = s:gb.dark1
@@ -251,6 +256,7 @@ let s:gb.bg3 = s:bg3
 let s:gb.bg4 = s:bg4
 
 let s:gb.gray = s:gray
+let s:gb.gray1 = s:gray1
 
 let s:gb.fg0 = s:fg0
 let s:gb.fg1 = s:fg1
@@ -515,7 +521,7 @@ call s:HL('LineNr', s:number_column)
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:gray, s:bg1, s:italic)
+call s:HL('Folded', s:fg3, s:bg1, s:italic)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gray, s:bg1)
 
