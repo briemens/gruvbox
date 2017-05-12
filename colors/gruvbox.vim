@@ -94,6 +94,7 @@ let s:gb.dark2       = ['#504945', 239]     " 80-73-69
 let s:gb.dark3       = ['#665c54', 241]     " 102-92-84
 let s:gb.dark4       = ['#7c6f64', 243]     " 124-111-100
 let s:gb.dark99      = ['#303030', 238]     " 60-56-54
+let s:gb.dark999     = ['#191919', 236]     " 60-56-54
 let s:gb.dark4_256   = ['#7c6f64', 243]     " 124-111-100
 
 let s:gb.gray_245    = ['#928374', 245]     " 146-131-116
@@ -448,7 +449,7 @@ endif
 
 if version >= 700
   " Screen line that the cursor is
-  call s:HL('CursorLine',   s:none, s:bg1)
+  call s:HL('CursorLine',   s:none, s:gb.dark1)
   " Screen column that the cursor is
   hi! link CursorColumn CursorLine
 
@@ -521,9 +522,9 @@ call s:HL('LineNr', s:number_column)
 call s:HL('SignColumn', s:none, s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:fg3, s:bg1, s:italic)
+call s:HL('Folded', s:gb.dark4, s:gb.dark999, s:italic)
 " Column where folds are displayed
-call s:HL('FoldColumn', s:gray, s:bg1)
+call s:HL('FoldColumn', s:gray, s:gb.dark0_soft)
 
 " }}}
 " Cursor: {{{
