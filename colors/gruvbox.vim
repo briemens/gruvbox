@@ -285,7 +285,7 @@ if exists('g:gruvbox_hls_cursor')
 endif
 
 let s:number_column = s:bg4
-let s:sign_column = s:bg1
+let s:sign_column = s:none " s:bg1
 
 if exists('g:gitgutter_override_sign_column_highlight') &&
       \ g:gitgutter_override_sign_column_highlight == 1
@@ -472,7 +472,7 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:bg1)
+  call s:HL('CursorLineNr', s:yellow, s:none) ", s:bg1)
 endif
 
 hi! link NonText GruvboxBg2
@@ -486,8 +486,8 @@ call s:HL('IncSearch', s:bg0, s:hls_cursor)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:bg4, s:bg0, s:bold . s:inverse)
-call s:HL('StatusLineNC', s:bg2, s:fg4, s:bold . s:inverse)
+call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
+call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
 
 " The column separating vertically split windows
 call s:HL('VertSplit', s:fg4, s:vert_split)
@@ -516,10 +516,10 @@ hi! link WarningMsg GruvboxRedBold
 " Gutter: {{{
 
 " Line number for :number and :# commands
-call s:HL('LineNr', s:number_column)
+call s:HL('LineNr', s:number_column, s:none)
 
 " Column where signs are displayed
-call s:HL('SignColumn', s:none, s:sign_column)
+call s:HL('SignColumn', s:red, s:none) ", s:sign_column)
 
 " Line used for closed folds
 call s:HL('Folded', s:gb.dark4, s:gb.dark999, s:italic)
