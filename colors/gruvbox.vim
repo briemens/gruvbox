@@ -87,7 +87,7 @@ let s:gb = {}
 
 " fill it with absolute colors
 let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
-let s:gb.dark0       = ['#282828', 235]     " 40-40-40
+let s:gb.dark0       = ['#282828', 0]     " 40-40-40
 let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
 let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
 let s:gb.dark2       = ['#504945', 239]     " 80-73-69
@@ -522,7 +522,7 @@ call s:HL('LineNr', s:number_column, s:none)
 call s:HL('SignColumn', s:red, s:none) ", s:sign_column)
 
 " Line used for closed folds
-call s:HL('Folded', s:gb.dark4, s:gb.dark999, s:italic)
+call s:HL('Folded', s:gb.dark4, s:gb.dark0, s:italic)
 " Column where folds are displayed
 call s:HL('FoldColumn', s:gray, s:gb.dark0_soft)
 
