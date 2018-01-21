@@ -979,6 +979,7 @@ hi! link cssGeneratedContentProp GruvboxAqua
 
 hi! link javaScriptBraces GruvboxFg1
 hi! link javaScriptFunction GruvboxAqua
+hi! link javaScriptThis GruvboxRed
 hi! link javascriptFuncName GruvboxAqua
 hi! link javascriptFuncArg GruvboxAqua
 hi! link javascriptLabel GruvboxAqua
@@ -987,6 +988,9 @@ hi! link javaScriptMember GruvboxBlue
 hi! link javaScriptNumber GruvboxPurple
 hi! link javaScriptNull GruvboxPurple
 hi! link javaScriptParens GruvboxFg3
+hi! link javaScriptGlobalObjects GruvboxAqua
+hi! link javaScriptIdentifier GruvboxYellow
+hi! link javaScriptIdentifier GruvboxFg1
 
 " }}}
 " YAJS: {{{
@@ -1010,7 +1014,7 @@ hi! link javascriptNodeGlobal GruvboxOrange
 hi! link javascriptVariable GruvboxRed
 " hi! link javascriptIdentifier GruvboxOrange
 " hi! link javascriptClassSuper GruvboxOrange
-hi! link javascriptIdentifier GruvboxOrange
+" hi! link javascriptIdentifier GruvboxOrange
 hi! link javascriptClassSuper GruvboxOrange
 
 " hi! link javascriptFuncKeyword GruvboxOrange
