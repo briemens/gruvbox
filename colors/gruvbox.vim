@@ -475,7 +475,7 @@ if version >= 703
   call s:HL('CursorLineNr', s:yellow, s:none) ", s:bg1)
 endif
 
-hi! link NonText GruvboxBg2
+hi! link NonText GruvboxGray
 hi! link SpecialKey GruvboxBg2
 
 call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
