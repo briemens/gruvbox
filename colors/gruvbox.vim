@@ -25,6 +25,7 @@ endif
 " }}}
 " Global Settings: {{{
 
+set background=dark
 if !exists('g:gruvbox_bold')
   let g:gruvbox_bold=1
 endif
