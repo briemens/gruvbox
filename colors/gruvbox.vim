@@ -476,7 +476,7 @@ if version >= 703
   call s:HL('ColorColumn',  s:none, s:color_column)
 
   " Concealed element: \lambda → λ
-  call s:HL('Conceal', s:blue, s:none)
+  " call s:HL('Conceal', "#383332", s:none)
 
   " Line number of CursorLine
   call s:HL('CursorLineNr', s:yellow, s:none) ", s:bg1)
@@ -1269,5 +1269,13 @@ autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#282322
 
 
 hi! link SearchCurrent IncSearch
+hi! Conceal guifg=#383332 guibg=NONE
+hi! EndOfBuffer guifg=#282322 guibg=NONE
 
 
+hi! ALEError       guisp=#881111 gui=undercurl ctermfg=203 cterm=bold,underline
+hi! ALEErrorLine       guibg=#881111 guifg=#ffffff
+hi! ALEWarning     guisp=#115511 gui=undercurl ctermfg=214 cterm=bold,underline
+hi! ALEWarningLine     guibg=#115511 " guifg=#ffffff
+hi! ALEErrorSign   guifg=#881111 ctermfg=203
+hi! ALEWarningSign guifg=#229922 ctermfg=214
