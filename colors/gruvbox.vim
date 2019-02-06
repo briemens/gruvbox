@@ -26,6 +26,12 @@ endif
 " Global Settings: {{{
 
 set background=dark
+let g:gruvbox_contrast_dark="dark"
+let g:airline_theme='gruvbox'
+if exists('AirlineTheme')
+  AirlineTheme gruvbox
+endif
+
 if !exists('g:gruvbox_bold')
   let g:gruvbox_bold=1
 endif
@@ -704,23 +710,23 @@ endif
 
 if !exists('g:rbpt_colorpairs')
   let g:rbpt_colorpairs =
-    \ [
-      \ ['blue', '#458588'], ['magenta', '#b16286'],
-      \ ['red',  '#cc241d'], ['166',     '#d65d0e']
-    \ ]
+        \ [
+        \ ['blue', '#458588'], ['magenta', '#b16286'],
+        \ ['red',  '#cc241d'], ['166',     '#d65d0e']
+        \ ]
 endif
 
 let g:rainbow_guifgs = [ '#d65d0e', '#cc241d', '#b16286', '#458588' ]
 let g:rainbow_ctermfgs = [ '166', 'red', 'magenta', 'blue' ]
 
 if !exists('g:rainbow_conf')
-   let g:rainbow_conf = {}
+  let g:rainbow_conf = {}
 endif
 if !has_key(g:rainbow_conf, 'guifgs')
-   let g:rainbow_conf['guifgs'] = g:rainbow_guifgs
+  let g:rainbow_conf['guifgs'] = g:rainbow_guifgs
 endif
 if !has_key(g:rainbow_conf, 'ctermfgs')
-   let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs
+  let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs
 endif
 
 let g:niji_dark_colours = g:rbpt_colorpairs
@@ -799,11 +805,11 @@ hi! link StartifyFooter GruvboxBg2
 " Vimshell: {{{
 
 let g:vimshell_escape_colors = [
-  \ s:bg4[0], s:red[0], s:green[0], s:yellow[0],
-  \ s:blue[0], s:purple[0], s:aqua[0], s:fg4[0],
-  \ s:bg0[0], s:red[0], s:green[0], s:orange[0],
-  \ s:blue[0], s:purple[0], s:aqua[0], s:fg0[0]
-  \ ]
+      \ s:bg4[0], s:red[0], s:green[0], s:yellow[0],
+      \ s:blue[0], s:purple[0], s:aqua[0], s:fg4[0],
+      \ s:bg0[0], s:red[0], s:green[0], s:orange[0],
+      \ s:blue[0], s:purple[0], s:aqua[0], s:fg0[0]
+      \ ]
 
 " }}}
 " BufTabLine: {{{
@@ -1236,3 +1242,32 @@ endfunction
 " }}}
 
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
+
+" BRIEMENS CUSTOMIZATIONS
+hi normal ctermbg=0 guibg=#282322
+if !has("gui_macvim") && !has("gui_vimr") && !exists('g:GuiLoaded')
+  hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE ctermbg=0 ctermfg=121 term=NONE cterm=NONE
+  highlight NonText guifg=#c9864f
+  " hi VertSplit ctermbg=0 guibg=#282322 ctermfg=208 guifg=#c9864f
+  " hi VertSplit ctermbg=none guibg=none ctermfg=208 guifg=#c9864f
+  " highlight Normal ctermbg=none guibg=none
+else
+  highlight NonText guifg=#c9864f
+  hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
+  hi! Vertsplit  gui=NONE guifg=#282322 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
+endif
+
+" Extra Highlights
+highlight NonText guifg=#c9864f
+autocmd BufEnter,BufReadPost,BufWinEnter * highlight Whitespace ctermfg=7 guifg=#333333
+autocmd BufEnter,BufReadPost,BufWinEnter * highlight ExtraWhitespace ctermbg=red guibg=red ctermfg=7 guifg=#333333
+autocmd BufEnter,BufReadPost,BufWinEnter * highlight Tabs ctermbg=red guibg=red ctermfg=7 guifg=#333333
+" autocmd BufEnter,BufReadPost,BufWinEnter * hi VertSplit ctermbg=none guibg=none ctermfg=208 guifg=#c9864f
+" autocmd BufEnter,BufReadPost,BufWinEnter * hi VertSplit ctermbg=none guibg=bg ctermfg=208 guifg=#c9864f
+autocmd BufEnter,BufReadPost,BufWinEnter * highlight NonText guifg=#c9864f
+autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#282322
+
+
+hi! link SearchCurrent IncSearch
+
+
