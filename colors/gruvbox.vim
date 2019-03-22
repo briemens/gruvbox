@@ -719,15 +719,15 @@ endif
 let g:rainbow_guifgs = [ '#d65d0e', '#cc241d', '#b16286', '#458588' ]
 let g:rainbow_ctermfgs = [ '166', 'red', 'magenta', 'blue' ]
 
-if !exists('g:rainbow_conf')
+" if !exists('g:rainbow_conf')
   let g:rainbow_conf = {}
-endif
-if !has_key(g:rainbow_conf, 'guifgs')
+" endif
+" if !has_key(g:rainbow_conf, 'guifgs')
   let g:rainbow_conf['guifgs'] = g:rainbow_guifgs
-endif
-if !has_key(g:rainbow_conf, 'ctermfgs')
+" endif
+" if !has_key(g:rainbow_conf, 'ctermfgs')
   let g:rainbow_conf['ctermfgs'] = g:rainbow_ctermfgs
-endif
+" endif
 
 let g:niji_dark_colours = g:rbpt_colorpairs
 let g:niji_light_colours = g:rbpt_colorpairs
