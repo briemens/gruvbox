@@ -1250,7 +1250,7 @@ if !has("gui_macvim") && !has("gui_vimr") && !exists('g:GuiLoaded')
   highlight NonText guifg=#c9864f
   " hi VertSplit ctermbg=0 guibg=#282322 ctermfg=208 guifg=#c9864f
   " hi VertSplit ctermbg=none guibg=none ctermfg=208 guifg=#c9864f
-  " highlight Normal ctermbg=none guibg=none
+  highlight Normal ctermbg=none guibg=none
 else
   highlight NonText guifg=#c9864f
   hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
