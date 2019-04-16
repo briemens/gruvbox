@@ -1269,8 +1269,9 @@ autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#282322
 
 
 hi! link SearchCurrent IncSearch
-hi! Conceal guifg=#383332 guibg=NONE
-hi! EndOfBuffer guifg=#282322 guibg=NONE
+" hi! Conceal guifg=#383332 guibg=NONE
+hi! Conceal guifg=#2d2d2d guibg=NONE
+hi! EndOfBuffer guifg=#0d0d0d guibg=NONE
 
 
 hi! ALEError       guisp=#881111 gui=undercurl ctermfg=203 cterm=bold,underline
