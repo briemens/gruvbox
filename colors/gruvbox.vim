@@ -1270,7 +1270,7 @@ autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#282322
 
 hi! link SearchCurrent IncSearch
 " hi! Conceal guifg=#383332 guibg=NONE
-hi! Conceal guifg=#2d2d2d guibg=NONE
+hi! Conceal guifg=#202020 guibg=NONE
 hi! EndOfBuffer guifg=#0d0d0d guibg=NONE
 
 
