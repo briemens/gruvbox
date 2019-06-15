@@ -474,6 +474,7 @@ endif
 if version >= 703
   " Highlighted screen columns
   call s:HL('ColorColumn',  s:none, s:color_column)
+  hi ColorColumn guibg=#2f2928
 
   " Concealed element: \lambda → λ
   " call s:HL('Conceal', "#383332", s:none)
@@ -1250,12 +1251,13 @@ if !has("gui_macvim") && !has("gui_vimr") && !exists('g:GuiLoaded')
   highlight NonText guifg=#c9864f
   " hi VertSplit ctermbg=0 guibg=#282322 ctermfg=208 guifg=#c9864f
   " hi VertSplit ctermbg=none guibg=none ctermfg=208 guifg=#c9864f
-  highlight Normal ctermbg=none guibg=none
+  " highlight Normal ctermbg=none guibg=none
 else
   highlight NonText guifg=#c9864f
   hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
   hi! Vertsplit  gui=NONE guifg=#282322 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
 endif
+call s:HL('VertSplit', s:bg0, s:bg0)
 
 " Extra Highlights
 highlight NonText guifg=#c9864f
@@ -1271,7 +1273,7 @@ autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#282322
 hi! link SearchCurrent IncSearch
 " hi! Conceal guifg=#383332 guibg=NONE
 hi! Conceal guifg=#202020 guibg=NONE
-hi! EndOfBuffer guifg=#0d0d0d guibg=NONE
+hi! EndOfBuffer guifg=#282322 guibg=NONE
 
 
 hi! ALEError       guisp=#881111 gui=undercurl ctermfg=203 cterm=bold,underline
