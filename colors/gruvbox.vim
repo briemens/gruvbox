@@ -474,7 +474,7 @@ endif
 if version >= 703
   " Highlighted screen columns
   call s:HL('ColorColumn',  s:none, s:color_column)
-  hi ColorColumn guibg=#2f2928
+  hi ColorColumn guibg=#2f2928 guifg=NONE
 
   " Concealed element: \lambda → λ
   " call s:HL('Conceal', "#383332", s:none)
@@ -1282,3 +1282,4 @@ hi! ALEWarning     guisp=#115511 gui=undercurl ctermfg=214 cterm=bold,underline
 hi! ALEWarningLine     guibg=#115511 " guifg=#ffffff
 hi! ALEErrorSign   guifg=#881111 ctermfg=203
 hi! ALEWarningSign guifg=#229922 ctermfg=214
+hi Normal guibg=NONE
