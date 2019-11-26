@@ -27,9 +27,9 @@ endif
 
 set background=dark
 let g:gruvbox_contrast_dark="dark"
-let g:airline_theme='gruvbox'
+let g:airline_theme='gruvbox_briemens'
 if exists('AirlineTheme')
-  AirlineTheme gruvbox
+  AirlineTheme gruvbox_briemens
 endif
 
 if !exists('g:gruvbox_bold')
@@ -94,7 +94,7 @@ let s:gb = {}
 
 " fill it with absolute colors
 let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
-let s:gb.dark0       = ['#282322', 0]     " 40-40-40
+let s:gb.dark0       = ['#1D2021', 0]     " 40-40-40
 let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
 let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
 let s:gb.dark2       = ['#504945', 239]     " 80-73-69
@@ -613,7 +613,8 @@ hi! link Float GruvboxPurple
 " Generic type
 hi! link Type GruvboxYellow
 " static, register, volatile, etc
-hi! link StorageClass GruvboxOrange
+" hi! link StorageClass GruvboxOrange
+hi! link StorageClass GruvboxRed
 " struct, union, enum, etc.
 hi! link Structure GruvboxAqua
 " typedef
@@ -991,6 +992,12 @@ hi! link cssGeneratedContentProp GruvboxAqua
 hi! link javaScriptBraces GruvboxFg1
 hi! link javaScriptFunction GruvboxAqua
 hi! link javaScriptThis GruvboxRed
+hi! link javascriptFuncCall GruvboxOrange
+" hi! link JavaScriptFuncBlock GruvboxAqua
+" hi! link JavaScriptVariableName GruvboxYellow
+hi! link JavaScriptVariableName GruvboxGreen
+hi! link JavaScriptFunctionVariableName GruvboxGreen
+hi! link JavaScriptFuncBlock GruvboxBlue
 hi! link javascriptFuncName GruvboxAqua
 hi! link javascriptFuncArg GruvboxAqua
 hi! link javascriptLabel GruvboxAqua
@@ -1245,17 +1252,17 @@ endfunction
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
 
 " BRIEMENS CUSTOMIZATIONS
-hi normal ctermbg=0 guibg=#282322
+hi normal ctermbg=0 guibg=#1D2021
 if !has("gui_macvim") && !has("gui_vimr") && !exists('g:GuiLoaded')
   hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE ctermbg=0 ctermfg=121 term=NONE cterm=NONE
   highlight NonText guifg=#c9864f
-  " hi VertSplit ctermbg=0 guibg=#282322 ctermfg=208 guifg=#c9864f
+  " hi VertSplit ctermbg=0 guibg=#1D2021 ctermfg=208 guifg=#c9864f
   " hi VertSplit ctermbg=none guibg=none ctermfg=208 guifg=#c9864f
   " highlight Normal ctermbg=none guibg=none
 else
   highlight NonText guifg=#c9864f
   hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
-  hi! Vertsplit  gui=NONE guifg=#282322 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
+  hi! Vertsplit  gui=NONE guifg=#1D2021 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
 endif
 call s:HL('VertSplit', s:bg0, s:bg0)
 
@@ -1267,13 +1274,13 @@ autocmd BufEnter,BufReadPost,BufWinEnter * highlight Tabs ctermbg=red guibg=red 
 " autocmd BufEnter,BufReadPost,BufWinEnter * hi VertSplit ctermbg=none guibg=none ctermfg=208 guifg=#c9864f
 " autocmd BufEnter,BufReadPost,BufWinEnter * hi VertSplit ctermbg=none guibg=bg ctermfg=208 guifg=#c9864f
 autocmd BufEnter,BufReadPost,BufWinEnter * highlight NonText guifg=#c9864f
-autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#282322
+autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#1D2021
 
 
 hi! link SearchCurrent IncSearch
 " hi! Conceal guifg=#383332 guibg=NONE
 hi! Conceal guifg=#202020 guibg=NONE
-hi! EndOfBuffer guifg=#282322 guibg=NONE
+hi! EndOfBuffer guifg=#1D2021 guibg=NONE
 
 
 hi! ALEError       guisp=#881111 gui=undercurl ctermfg=203 cterm=bold,underline
@@ -1283,3 +1290,5 @@ hi! ALEWarningLine     guibg=#115511 " guifg=#ffffff
 hi! ALEErrorSign   guifg=#881111 ctermfg=203
 hi! ALEWarningSign guifg=#229922 ctermfg=214
 hi Normal guibg=NONE
+" call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
+" call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
