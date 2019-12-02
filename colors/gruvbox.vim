@@ -1264,6 +1264,7 @@ else
   hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
   hi! Vertsplit  gui=NONE guifg=#1D2021 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
 endif
+hi! Folded guibg=#1f2223
 call s:HL('VertSplit', s:bg0, s:bg0)
 
 " Extra Highlights
