@@ -1290,6 +1290,30 @@ hi! ALEWarning     guisp=#115511 gui=undercurl ctermfg=214 cterm=bold,underline
 hi! ALEWarningLine     guibg=#115511 " guifg=#ffffff
 hi! ALEErrorSign   guifg=#881111 ctermfg=203
 hi! ALEWarningSign guifg=#229922 ctermfg=214
+
+" CocUnderline   xxx cterm=underline gui=underline
+" CocErrorSign   xxx ctermfg=9 guifg=#ff0000
+" CocWarningSign xxx ctermfg=130 guifg=#ff922b
+" CocInfoSign    xxx ctermfg=11 guifg=#fab005
+" CocHintSign    xxx ctermfg=12 guifg=#15aabf
+" CocSelectedText xxx ctermfg=9 guifg=#fb4934
+" CocCodeLens    xxx ctermfg=248 guifg=#999999
+" CocErrorFloat  xxx links to CocErrorSign
+" CocWarningFloat xxx links to CocWarningSign
+" CocInfoFloat   xxx links to CocInfoSign
+" CocHintFloat   xxx links to CocHintSign
+" CocErrorHighlight xxx links to CocUnderline
+" CocWarningHighlight xxx links to CocUnderline
+" CocInfoHighlight xxx links to CocUnderline
+" CocHintHighlight xxx links to CocUnderline
+" CocListMode    xxx links to ModeMsg
+" CocListPath    xxx links to Comment
+" CocHighlightText xxx links to CursorColumn
+" CocFloating    xxx links to NormalFloat
+" CocHoverRange  xxx links to Search
+" CocCursorRange xxx links to Search
+
+
 hi Normal guibg=NONE
 " call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
 " call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
