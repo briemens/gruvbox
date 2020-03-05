@@ -1315,5 +1315,6 @@ hi! ALEWarningSign guifg=#229922 ctermfg=214
 
 
 hi Normal guibg=NONE
+hi NormalFloat guifg=#bfb393 guibg=#262a2c
 " call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
 " call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
