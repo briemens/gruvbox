@@ -93,8 +93,10 @@ let s:is_dark=(&background == 'dark')
 let s:gb = {}
 
 " fill it with absolute colors
-let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
-let s:gb.dark0       = ['#1D2021', 0]     " 40-40-40
+" let s:gb.dark0_hard  = ['#1d2021', 234]     " 29-32-33
+" let s:gb.dark0       = ['#1D2021', 0]     " 40-40-40
+let s:gb.dark0_hard  = ['#000000', 234]     " 29-32-33
+let s:gb.dark0       = ['#000000', 0]     " 40-40-40
 let s:gb.dark0_soft  = ['#32302f', 236]     " 50-48-47
 let s:gb.dark1       = ['#3c3836', 237]     " 60-56-54
 let s:gb.dark2       = ['#504945', 239]     " 80-73-69
@@ -118,6 +120,8 @@ let s:gb.light4      = ['#a89984', 246]     " 168-153-132
 let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
 
 let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
+" let s:gb.bright_red     = ['#FF2F1F', 167]     " 251-73-52
+
 let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
 let s:gb.bright_yellow  = ['#fabd2f', 214]     " 250-189-47
 let s:gb.bright_blue    = ['#83a598', 109]     " 131-165-152
@@ -130,7 +134,8 @@ let s:gb.neutral_green  = ['#98971a', 106]     " 152-151-26
 let s:gb.neutral_yellow = ['#d79921', 172]     " 215-153-33
 let s:gb.neutral_blue   = ['#458588', 66]      " 69-133-136
 let s:gb.neutral_purple = ['#b16286', 132]     " 177-98-134
-let s:gb.neutral_aqua   = ['#689d6a', 72]      " 104-157-106
+" let s:gb.neutral_aqua   = ['#689d6a', 72]      " 104-157-106
+let s:gb.neutral_aqua   = ['#7AA697', 72]      " 104-157-106
 let s:gb.neutral_orange = ['#d65d0e', 166]     " 214-93-14
 
 let s:gb.faded_red      = ['#9d0006', 88]      " 157-0-6
@@ -551,7 +556,7 @@ hi! link lCursor Cursor
 " Syntax Highlighting: {{{
 
 if g:gruvbox_improved_strings == 0
-  hi! link Special GruvboxOrange
+  hi! link Special GruvboxRed
 else
   call s:HL('Special', s:bg1, s:orange, s:italic)
 endif
@@ -1011,6 +1016,16 @@ hi! link javaScriptIdentifier GruvboxYellow
 hi! link javaScriptIdentifier GruvboxFg1
 
 " }}}
+" YATS: {{{
+hi! link typescriptArray GruvboxAqua
+hi! link typescriptBlock GruvboxAqua
+hi! link typescriptInterfaceName GruvboxYellow
+hi! link typescriptMember GruvboxAqua
+hi! link typescriptImport GruvboxRed
+hi! link typescriptIdentifierName  GruvboxAqua
+hi! link typescriptVariableDeclaration GruvboxAqua
+hi! link typescriptTypeReference GruvboxYellow
+" }}
 " YAJS: {{{
 
 hi! link javascriptImport GruvboxAqua
@@ -1252,6 +1267,7 @@ endfunction
 " vim: set sw=2 ts=2 sts=2 et tw=80 ft=vim fdm=marker:
 
 " BRIEMENS CUSTOMIZATIONS
+" hi normal ctermbg=0 guibg=#000000
 hi normal ctermbg=0 guibg=#1D2021
 if !has("gui_macvim") && !has("gui_vimr") && !exists('g:GuiLoaded')
   hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE ctermbg=0 ctermfg=121 term=NONE cterm=NONE
@@ -1261,11 +1277,13 @@ if !has("gui_macvim") && !has("gui_vimr") && !exists('g:GuiLoaded')
   " highlight Normal ctermbg=none guibg=none
 else
   highlight NonText guifg=#c9864f
-  hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
+  " hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
   hi! Vertsplit  gui=NONE guifg=#1D2021 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
+  " hi! Vertsplit  gui=NONE guifg=#000000 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
 endif
-hi! Folded guibg=#1f2223
-call s:HL('VertSplit', s:bg0, s:bg0)
+" hi! Folded guibg=#1f2223
+hi! Folded guibg=#1a1a1a
+" call s:HL('VertSplit', s:bg0, s:bg0)
 
 " Extra Highlights
 highlight NonText guifg=#c9864f
@@ -1276,12 +1294,14 @@ autocmd BufEnter,BufReadPost,BufWinEnter * highlight Tabs ctermbg=red guibg=red 
 " autocmd BufEnter,BufReadPost,BufWinEnter * hi VertSplit ctermbg=none guibg=bg ctermfg=208 guifg=#c9864f
 autocmd BufEnter,BufReadPost,BufWinEnter * highlight NonText guifg=#c9864f
 autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#1D2021
+" autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#000000
 
 
 hi! link SearchCurrent IncSearch
 " hi! Conceal guifg=#383332 guibg=NONE
 hi! Conceal guifg=#202020 guibg=NONE
 hi! EndOfBuffer guifg=#1D2021 guibg=NONE
+" hi! EndOfBuffer guifg=#000000 guibg=NONE
 
 
 hi! ALEError       guisp=#881111 gui=undercurl ctermfg=203 cterm=bold,underline
