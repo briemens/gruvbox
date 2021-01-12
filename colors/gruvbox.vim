@@ -1028,60 +1028,6 @@ hi! link typescriptTypeReference GruvboxYellow
 " }}
 " YAJS: {{{
 
-hi! link javascriptImport GruvboxAqua
-hi! link javascriptExport GruvboxAqua
-hi! link javascriptClassKeyword GruvboxAqua
-hi! link javascriptClassExtends GruvboxAqua
-hi! link javascriptDefault GruvboxAqua
-
-hi! link javascriptClassName GruvboxYellow
-hi! link javascriptClassSuperName GruvboxYellow
-hi! link javascriptGlobal GruvboxYellow
-
-hi! link javascriptEndColons GruvboxFg1
-hi! link javascriptFuncArg GruvboxOrange
-hi! link javascriptGlobalMethod GruvboxOrange
-hi! link javascriptNodeGlobal GruvboxOrange
-
-" hi! link javascriptVariable GruvboxOrange
-hi! link javascriptVariable GruvboxRed
-" hi! link javascriptIdentifier GruvboxOrange
-" hi! link javascriptClassSuper GruvboxOrange
-" hi! link javascriptIdentifier GruvboxOrange
-hi! link javascriptClassSuper GruvboxOrange
-
-" hi! link javascriptFuncKeyword GruvboxOrange
-" hi! link javascriptAsyncFunc GruvboxOrange
-hi! link javascriptFuncKeyword GruvboxAqua
-hi! link javascriptAsyncFunc GruvboxAqua
-hi! link javascriptClassStatic GruvboxOrange
-
-hi! link javascriptOperator GruvboxRed
-hi! link javascriptForOperator GruvboxRed
-hi! link javascriptYield GruvboxRed
-hi! link javascriptExceptions GruvboxRed
-hi! link javascriptMessage GruvboxRed
-
-hi! link javascriptTemplateSB GruvboxAqua
-hi! link javascriptTemplateSubstitution GruvboxFg1
-
-hi! link javascriptLabel GruvboxAqua
-hi! link javascriptObjectLabel GruvboxPurple
-hi! link javascriptObject GruvboxAqua
-
-hi! link javascriptPropertyName GruvboxAqua
-" hi! link javascriptLabel GruvboxFg1
-" hi! link javascriptObjectLabel GruvboxFg1
-" hi! link javascriptPropertyName GruvboxFg1
-
-hi! link javascriptLogicSymbols GruvboxFg1
-hi! link javascriptArrowFunc GruvboxFg1
-
-hi! link javascriptDocParamName GruvboxFg4
-hi! link javascriptDocTags GruvboxFg4
-hi! link javascriptDocNotation GruvboxFg4
-hi! link javascriptDocParamType GruvboxFg4
-hi! link javascriptDocNamedParamType GruvboxFg4
 
 " }}}
 " CoffeeScript: {{{
@@ -1283,7 +1229,7 @@ else
 endif
 " hi! Folded guibg=#1f2223
 " hi! Folded guibg=#1a1a1a
-hi! Folded gui=NONE guibg=#524743 guifg=#AF9A84
+hi! Folded gui=NONE guibg=NONE guifg=#AF9A84
 " call s:HL('VertSplit', s:bg0, s:bg0)
 
 " Extra Highlights
@@ -1316,6 +1262,7 @@ hi! CocWarningHighlight guibg=#115511 " guifg=#ffffff
 hi! ALEErrorSign   guifg=#881111 ctermfg=203
 hi! ALEWarningSign guifg=#229922 ctermfg=214
 hi! link CocErrorFloat Normal
+hi! FZFFloat guibg=#212425
 
 " CocUnderline   xxx cterm=underline gui=underline
 " CocErrorSign   xxx ctermfg=9 guifg=#ff0000
