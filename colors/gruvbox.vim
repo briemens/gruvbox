@@ -585,7 +585,7 @@ hi! link Keyword GruvboxRed
 " Variable name
 hi! link Identifier GruvboxBlue
 " Function name
-hi! link Function GruvboxGreenBold
+hi! link Function GruvboxGreen
 
 " Generic preprocessor
 hi! link PreProc GruvboxAqua
@@ -846,12 +846,12 @@ hi! link diffLine GruvboxBlue
 hi! link htmlTag GruvboxBlue
 hi! link htmlEndTag GruvboxBlue
 
-hi! link htmlTagName GruvboxAquaBold
+hi! link htmlTagName GruvboxAqua
 hi! link htmlArg GruvboxAqua
 
 hi! link htmlScriptTag GruvboxPurple
 hi! link htmlTagN GruvboxFg1
-hi! link htmlSpecialTagName GruvboxAquaBold
+hi! link htmlSpecialTagName GruvboxAqua
 
 call s:HL('htmlLink', s:fg4, s:none, s:underline)
 
@@ -873,7 +873,7 @@ hi! link xmlTag GruvboxBlue
 hi! link xmlEndTag GruvboxBlue
 hi! link xmlTagName GruvboxBlue
 hi! link xmlEqual GruvboxBlue
-hi! link docbkKeyword GruvboxAquaBold
+hi! link docbkKeyword GruvboxAqua
 
 hi! link xmlDocTypeDecl GruvboxGray
 hi! link xmlDocTypeKeyword GruvboxPurple
@@ -1018,7 +1018,7 @@ hi! link javaScriptIdentifier GruvboxFg1
 " }}}
 " YATS: {{{
 hi! link typescriptArray GruvboxAqua
-hi! link typescriptBlock GruvboxAqua
+hi! link typescriptBlock GruvboxBlue
 hi! link typescriptInterfaceName GruvboxYellow
 hi! link typescriptMember GruvboxAqua
 hi! link typescriptImport GruvboxRed
@@ -1282,7 +1282,8 @@ else
   " hi! Vertsplit  gui=NONE guifg=#000000 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
 endif
 " hi! Folded guibg=#1f2223
-hi! Folded guibg=#1a1a1a
+" hi! Folded guibg=#1a1a1a
+hi! Folded gui=NONE guibg=#524743 guifg=#AF9A84
 " call s:HL('VertSplit', s:bg0, s:bg0)
 
 " Extra Highlights
@@ -1306,10 +1307,15 @@ hi! EndOfBuffer guifg=#1D2021 guibg=NONE
 
 hi! ALEError       guisp=#881111 gui=undercurl ctermfg=203 cterm=bold,underline
 hi! ALEErrorLine       guibg=#881111 guifg=#ffffff
+" hi! CocErrorLine       guibg=#881111 guifg=#ffffff
+hi! CocErrorHighlight       guibg=#881111 guifg=#ffffff
 hi! ALEWarning     guisp=#115511 gui=undercurl ctermfg=214 cterm=bold,underline
 hi! ALEWarningLine     guibg=#115511 " guifg=#ffffff
+" hi! CocWarningLine     guibg=#115511 " guifg=#ffffff
+hi! CocWarningHighlight guibg=#115511 " guifg=#ffffff
 hi! ALEErrorSign   guifg=#881111 ctermfg=203
 hi! ALEWarningSign guifg=#229922 ctermfg=214
+hi! link CocErrorFloat Normal
 
 " CocUnderline   xxx cterm=underline gui=underline
 " CocErrorSign   xxx ctermfg=9 guifg=#ff0000
@@ -1335,6 +1341,7 @@ hi! ALEWarningSign guifg=#229922 ctermfg=214
 
 
 hi Normal guibg=NONE
-hi NormalFloat guifg=#bfb393 guibg=#262a2c
+"hi NormalFloat guifg=#bfb393 guibg=#514944
+hi NormalFloat guifg=#bfb393 guibg=#333333
 " call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
 " call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
