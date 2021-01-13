@@ -510,7 +510,7 @@ hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
 call s:HL('WildMenu', s:blue, s:bg2, s:bold)
 
 " Directory names, special names in listing
-hi! link Directory GruvboxGreenBold
+hi! link Directory GruvboxGreen
 
 " Titles for output from :set all, :autocmd, etc.
 hi! link Title GruvboxGreenBold
