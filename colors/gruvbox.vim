@@ -1028,6 +1028,70 @@ hi! link typescriptTypeReference GruvboxYellow
 " }}
 " YAJS: {{{
 
+hi! link javascriptArray GruvboxAqua
+hi! link javascriptBlock GruvboxBlue
+hi! link javascriptInterfaceName GruvboxYellow
+hi! link javascriptMember GruvboxAqua
+hi! link javascriptImport GruvboxRed
+hi! link javascriptObjectKey  GruvboxBlue
+hi! link javascriptIdentifierName  GruvboxAqua
+hi! link javascriptIdentifier  GruvboxAqua
+hi! link javascriptVariableDeclaration GruvboxAqua
+hi! link javascriptTypeReference GruvboxYellow
+
+hi! link javascriptExport GruvboxAqua
+hi! link javascriptClassKeyword GruvboxAqua
+hi! link javascriptClassExtends GruvboxAqua
+hi! link javascriptDefault GruvboxAqua
+
+hi! link javascriptClassName GruvboxYellow
+hi! link javascriptClassSuperName GruvboxYellow
+hi! link javascriptGlobal GruvboxYellow
+
+hi! link javascriptEndColons GruvboxFg1
+hi! link javascriptFuncArg GruvboxOrange
+hi! link javascriptGlobalMethod GruvboxOrange
+hi! link javascriptNodeGlobal GruvboxOrange
+
+" hi! link javascriptVariable GruvboxOrange
+hi! link javascriptVariable GruvboxRed
+" hi! link javascriptIdentifier GruvboxOrange
+" hi! link javascriptClassSuper GruvboxOrange
+" hi! link javascriptIdentifier GruvboxOrange
+hi! link javascriptClassSuper GruvboxOrange
+
+" hi! link javascriptFuncKeyword GruvboxOrange
+" hi! link javascriptAsyncFunc GruvboxOrange
+hi! link javascriptFuncKeyword GruvboxAqua
+hi! link javascriptAsyncFunc GruvboxAqua
+hi! link javascriptClassStatic GruvboxOrange
+
+hi! link javascriptOperator GruvboxRed
+hi! link javascriptForOperator GruvboxRed
+hi! link javascriptYield GruvboxRed
+hi! link javascriptExceptions GruvboxRed
+hi! link javascriptMessage GruvboxRed
+
+hi! link javascriptTemplateSB GruvboxAqua
+hi! link javascriptTemplateSubstitution GruvboxFg1
+
+hi! link javascriptLabel GruvboxAqua
+hi! link javascriptObjectLabel GruvboxPurple
+hi! link javascriptObject GruvboxAqua
+
+hi! link javascriptPropertyName GruvboxAqua
+" hi! link javascriptLabel GruvboxFg1
+" hi! link javascriptObjectLabel GruvboxFg1
+" hi! link javascriptPropertyName GruvboxFg1
+
+hi! link javascriptLogicSymbols GruvboxFg1
+hi! link javascriptArrowFunc GruvboxFg1
+
+hi! link javascriptDocParamName GruvboxFg4
+hi! link javascriptDocTags GruvboxFg4
+hi! link javascriptDocNotation GruvboxFg4
+hi! link javascriptDocParamType GruvboxFg4
+hi! link javascriptDocNamedParamType GruvboxFg4
 
 " }}}
 " CoffeeScript: {{{
