@@ -488,6 +488,7 @@ if version >= 703
   call s:HL('CursorLineNr', s:yellow, s:none) ", s:bg1)
 endif
 
+hi! CursorLine gui=BOLD guibg=#2d3031
 hi! link NonText GruvboxGray
 hi! link SpecialKey GruvboxBg2
 
@@ -1290,7 +1291,7 @@ if !has("gui_macvim") && !has("gui_vimr") && !exists('g:GuiLoaded')
 else
   highlight NonText guifg=#c9864f
   " hi! VertSplit gui=NONE guifg=#c9864f guibg=NONE
-  hi! Vertsplit  gui=NONE guifg=#1D2021 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
+  hi! VertSplit  gui=NONE guifg=#1D2021 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
   " hi! Vertsplit  gui=NONE guifg=#000000 guibg=NONE ctermbg=0 ctermfg=0 term=NONE cterm=NONE
 endif
 " hi! Folded guibg=#1f2223
@@ -1316,17 +1317,19 @@ hi! Conceal guifg=#202020 guibg=NONE
 hi! EndOfBuffer guifg=#1D2021 guibg=NONE
 " hi! EndOfBuffer guifg=#000000 guibg=NONE
 
-
 hi! ALEError       guisp=#881111 gui=undercurl ctermfg=203 cterm=bold,underline
-hi! ALEErrorLine       guibg=#881111 guifg=#ffffff
+" hi! ALEErrorLine       guibg=#881111 guifg=#ffffff
+hi! ALEErrorLine       guibg=NONE guifg=NONE
 " hi! CocErrorLine       guibg=#881111 guifg=#ffffff
 hi! CocErrorHighlight       guibg=#881111 guifg=#ffffff
-hi! ALEWarning     guisp=#115511 gui=undercurl ctermfg=214 cterm=bold,underline
-hi! ALEWarningLine     guibg=#115511 " guifg=#ffffff
-" hi! CocWarningLine     guibg=#115511 " guifg=#ffffff
-hi! CocWarningHighlight guibg=#115511 " guifg=#ffffff
+" hi! ALEWarning     guisp=#115511  gui=undercurl ctermfg=214 cterm=bold,underline
+" hi! ALEWarningLine     guibg=#115511  " guifg=#ffffff
+hi! ALEWarning       guibg=#115511  gui=undercurl ctermfg=203 cterm=bold,underline
+hi! ALEWarningLine       guibg=NONE guifg=NONE
+" hi! CocWarningLine     guibg=#115511  " guifg=#ffffff
+hi! CocWarningHighlight guibg=#115511  " guifg=#ffffff
 hi! ALEErrorSign   guifg=#881111 ctermfg=203
-hi! ALEWarningSign guifg=#229922 ctermfg=214
+hi! ALEWarningSign guifg=#115511  ctermfg=214
 hi! link CocErrorFloat Normal
 hi! FZFFloat guibg=#212425
 
