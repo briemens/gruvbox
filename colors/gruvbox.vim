@@ -1028,6 +1028,7 @@ hi! link typescriptImport GruvboxRed
 hi! link typescriptIdentifierName  GruvboxAqua
 hi! link typescriptVariableDeclaration GruvboxAqua
 hi! link typescriptTypeReference GruvboxYellow
+hi! link typescriptTemplateSubstitution GruvboxBlue
 " }}
 " YAJS: {{{
 
