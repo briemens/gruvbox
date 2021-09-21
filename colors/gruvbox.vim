@@ -1314,7 +1314,8 @@ autocmd BufEnter,BufReadPost,BufWinEnter * highlight EndOfBuffer guifg=#1D2021
 
 hi! link SearchCurrent IncSearch
 " hi! Conceal guifg=#383332 guibg=NONE
-hi! Conceal guifg=#202020 guibg=NONE
+" hi! Conceal guifg=#202020 guibg=NONE
+hi! Conceal guifg=#666666 guibg=NONE
 hi! EndOfBuffer guifg=#1D2021 guibg=NONE
 " hi! EndOfBuffer guifg=#000000 guibg=NONE
 
@@ -1332,7 +1333,8 @@ hi! CocWarningHighlight guibg=#115511  " guifg=#ffffff
 hi! ALEErrorSign   guifg=#881111 ctermfg=203
 hi! ALEWarningSign guifg=#115511  ctermfg=214
 hi! link CocErrorFloat Normal
-hi! FZFFloat guibg=#212425
+" hi! FZFFloat guibg=#212425
+hi! FZFFloat guibg=#111111
 
 " CocUnderline   xxx cterm=underline gui=underline
 " CocErrorSign   xxx ctermfg=9 guifg=#ff0000
@@ -1359,6 +1361,7 @@ hi! FZFFloat guibg=#212425
 
 hi Normal guibg=NONE
 "hi NormalFloat guifg=#bfb393 guibg=#514944
-hi NormalFloat guifg=#bfb393 guibg=#333333
+" hi NormalFloat guifg=#bfb393 guibg=#333333
+hi NormalFloat guifg=#bfb393 guibg=#111111
 " call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
 " call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
