@@ -488,7 +488,8 @@ if version >= 703
   call s:HL('CursorLineNr', s:yellow, s:none) ", s:bg1)
 endif
 
-hi! CursorLine gui=BOLD guibg=#2d3031
+" hi! CursorLine gui=BOLD guibg=#2d3031
+hi! CursorLine gui=NONE guibg=#2d3031
 hi! link NonText GruvboxGray
 hi! link SpecialKey GruvboxBg2
 
@@ -1365,3 +1366,34 @@ hi Normal guibg=NONE
 hi NormalFloat guifg=#bfb393 guibg=#111111
 " call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
 " call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
+
+hi Normal guibg=#282322
+hi FloatShadow guibg=#1b1817
+hi NormalFloat guibg=#201c1b
+hi FloatShadowThrough guibg=#25201f
+hi FZFFloat guibg=#25201f
+hi PMenu guibg=#201c1b
+hi WildMenu guibg=#201c1b
+
+
+hi! link TSArray GruvboxAqua
+hi! link TSBlock GruvboxBlue
+hi! link TSConstant String
+hi! link TSInterfaceName GruvboxYellow
+hi! link TSMember GruvboxAqua
+hi! link TSImport GruvboxRed
+hi! link TSIdentifierName  GruvboxAqua
+hi! link TSTypeReference GruvboxYellow
+hi! link TSTemplateSubstitution GruvboxBlue
+hi! link TSVariable GruvboxBlue
+hi! link TSFunction  GruvboxYellow
+hi! link TSProperty  GruvboxBlue
+" hi! link TSConstructor  GruvboxYellow
+hi! link TSOperator  NONE
+hi! link TSConstructor  NONE
+hi! link TSKeywordFunction  GruvboxAqua
+hi! link TSInclude GruvboxRed
+hi! link TSPunctBracket GruvboxGray
+hi! link TSTag GruvboxAqua
+hi! link TSTagAttribute GruvboxYellow
+hi! link TSTagDelimiter GruvboxAqua
