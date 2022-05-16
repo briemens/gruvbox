@@ -119,12 +119,16 @@ let s:gb.light3      = ['#bdae93', 248]     " 189-174-147
 let s:gb.light4      = ['#a89984', 246]     " 168-153-132
 let s:gb.light4_256  = ['#a89984', 246]     " 168-153-132
 
-let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
+" let s:gb.bright_red     = ['#fb4934', 167]     " 251-73-52
+let s:gb.bright_red     = ['#FF2728', 167]
 " let s:gb.bright_red     = ['#FF2F1F', 167]     " 251-73-52
 
-let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
-let s:gb.bright_yellow  = ['#fabd2f', 214]     " 250-189-47
-let s:gb.bright_blue    = ['#83a598', 109]     " 131-165-152
+" let s:gb.bright_green   = ['#b8bb26', 142]     " 184-187-38
+let s:gb.bright_green   = ['#B7BD00', 142]
+" let s:gb.bright_yellow  = ['#fabd2f', 214]     " 250-189-47
+let s:gb.bright_yellow  = ['#FFBB00', 214]
+" let s:gb.bright_blue    = ['#83a598', 109]     " 131-165-152
+let s:gb.bright_blue    = ['#7BA798', 109]
 let s:gb.bright_purple  = ['#d3869b', 175]     " 211-134-155
 let s:gb.bright_aqua    = ['#8ec07c', 108]     " 142-192-124
 let s:gb.bright_orange  = ['#fe8019', 208]     " 254-128-25
@@ -1367,7 +1371,8 @@ hi NormalFloat guifg=#bfb393 guibg=#111111
 " call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
 " call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
 
-hi Normal guibg=#282322
+" hi Normal guibg=#282322
+hi Normal guibg=#1C2021
 hi FloatShadow guibg=#1b1817
 hi NormalFloat guibg=#201c1b
 hi FloatShadowThrough guibg=#25201f
