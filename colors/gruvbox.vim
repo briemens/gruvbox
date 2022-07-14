@@ -1302,7 +1302,8 @@ else
 endif
 " hi! Folded guibg=#1f2223
 " hi! Folded guibg=#1a1a1a
-hi! Folded gui=NONE guibg=NONE guifg=#AF9A84
+" hi! Folded gui=NONE guibg=NONE guifg=#AF9A84
+hi! Folded gui=NONE guibg=#333333 guifg=#AF9A84
 " call s:HL('VertSplit', s:bg0, s:bg0)
 
 " Extra Highlights
