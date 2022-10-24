@@ -1326,14 +1326,14 @@ hi! EndOfBuffer guifg=#1D2021 guibg=NONE
 " hi! EndOfBuffer guifg=#000000 guibg=NONE
 
 hi! ALEError       guisp=#881111 gui=undercurl ctermfg=203 cterm=bold,underline
-" hi! ALEErrorLine       guibg=#881111 guifg=#ffffff
-hi! ALEErrorLine       guibg=NONE guifg=NONE
+hi! ALEErrorLine       guibg=#881111 guifg=#ffffff
+" hi! ALEErrorLine       guibg=NONE guifg=NONE
 " hi! CocErrorLine       guibg=#881111 guifg=#ffffff
 hi! CocErrorHighlight       guibg=#881111 guifg=#ffffff
 " hi! ALEWarning     guisp=#115511  gui=undercurl ctermfg=214 cterm=bold,underline
-" hi! ALEWarningLine     guibg=#115511  " guifg=#ffffff
+hi! ALEWarningLine     guibg=#115511  " guifg=#ffffff
 hi! ALEWarning       guibg=#115511  gui=undercurl ctermfg=203 cterm=bold,underline
-hi! ALEWarningLine       guibg=NONE guifg=NONE
+" hi! ALEWarningLine       guibg=NONE guifg=NONE
 " hi! CocWarningLine     guibg=#115511  " guifg=#ffffff
 hi! CocWarningHighlight guibg=#115511  " guifg=#ffffff
 hi! ALEErrorSign   guifg=#881111 ctermfg=203
@@ -1366,16 +1366,17 @@ hi! FZFFloat guibg=#111111
 
 
 hi Normal guibg=NONE
+hi NormalFloat guifg=#bfb393 guibg=#554948
 "hi NormalFloat guifg=#bfb393 guibg=#514944
 " hi NormalFloat guifg=#bfb393 guibg=#333333
-hi NormalFloat guifg=#bfb393 guibg=#111111
+" hi NormalFloat guifg=#bfb393 guibg=#111111
 " call s:HL('StatusLine',   s:bg0, s:bg0, s:bold . s:inverse)
 " call s:HL('StatusLineNC', s:bg1, s:fg4, s:bold . s:inverse)
 
 " hi Normal guibg=#282322
-hi Normal guibg=#1C2021
+" hi Normal guibg=#1C2021
 hi FloatShadow guibg=#1b1817
-hi NormalFloat guibg=#201c1b
+" hi NormalFloat guibg=#201c1b
 hi FloatShadowThrough guibg=#25201f
 hi FZFFloat guibg=#25201f
 hi PMenu guibg=#201c1b
@@ -1403,3 +1404,5 @@ hi! link TSPunctBracket GruvboxGray
 hi! link TSTag GruvboxAqua
 hi! link TSTagAttribute GruvboxYellow
 hi! link TSTagDelimiter GruvboxAqua
+
+hi! CocMenuSel guibg=#3e3e3e
